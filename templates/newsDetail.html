@@ -1,0 +1,103 @@
+{% extends 'base.html' %} {% load static %} {% block title %} Detay sayfası {% endblock title %} {% block script %} {% endblock script %} {% block css %}
+
+<link rel="stylesheet" href="{% static 'css/newsDetail.css'%}"> {% endblock css %} {% block content %}
+
+
+<div class="newsEmployee">
+
+    <div class="container">
+
+        <div class="path_top">
+            {% for news in targetnews %}
+            <a href="/">Anasayfa</a> <span><i class="fas fa-chevron-right"></i></span>
+            <a href="#">Haberler</a><span><i class="fas fa-chevron-right"></i></span>
+            <a href="#">{{news.title|upper}}</a> <span>
+            {% endfor %}
+
+        </div>
+    </div>
+
+
+
+    <div class="container">
+
+
+        <div class="sec1">
+
+            {% for news in targetnews %}
+            <div class="scrb4v">
+                <div class="news_title">
+                    {{news.title}}
+                </div>
+                <div class="mews_createdDate_see">
+                    <div>
+                        {{news.created_date}}
+                    </div>
+            <span>
+                <img width="17" class="pb-1 mr-1" src="https://img.icons8.com/material/24/000000/visible.png"/>
+                        {{news.see|floatformat:0}}
+                    </span>
+
+        </div>
+    </div>
+
+    <div class="news_image">
+        <img width="65" src="{{news.image.url}}" alt="{{news.title}}">
+
+    </div>
+    <div class="news_content">
+
+        {{news.content}}
+    </div>
+
+    {% endfor %}
+
+
+
+</div>
+<div class="sec2">
+
+
+    <h3>Güncel Haberler</h3>
+
+    {% for news in all_news %} {% if news.id != targetId %}
+    <div class="recentNews_image">
+        <a href="/Haberler/{{news.slug}}">
+
+            <img width="25" src="{{news.image.url}}" alt="{{news.title}}">
+        </a>
+
+    </div>
+    <div class="recentNews_title">
+        <a href="/Haberler/{{news.slug}}">
+
+        {{news.title}}
+    </a>
+
+    </div>
+
+    <div class="recentNews_scvf">
+        <span>
+            {{news.created_date}}
+        </span>
+        <div>
+            <img width="15" class="mr-1 pb-1" src="https://img.icons8.com/material/24/000000/visible.png" /> {{news.see|floatformat:0}}
+        </div>
+
+
+    </div>
+
+    {% endif %} {% endfor %}
+
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+
+{% endblock content %}

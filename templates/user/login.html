@@ -1,0 +1,108 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"> {% block css %} {% endblock css %}
+
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <h2 class="alert_m">
+        Lütfen Oturum Açınız
+    </h2>
+    <div class="error_message" style="display: none;">
+        Kullanıcı adı yada Parola hatalı
+    </div>
+    <div class="employee">
+        <!-- {% load crispy_forms_tags %} -->
+
+        <div class="form_wrapper">
+
+            <div class="form_header">
+                <a href="/">
+                    <img src="/media/global/Mersin_Logo.png" alt="Mersin Üniversitesi">
+
+                </a>
+            </div>
+
+            <form method="post">
+                {% csrf_token %}
+                <div class="input_group">
+                    <input type="text" required name="username" id="usernameInput" placeholder="Kullanıcı adı ">
+                    <div class="input_group_addon">
+                        @
+                    </div>
+                    <select class="form-control" id="domain_name">
+                        <option value="mersin.edu.tr">mersin.edu.tr</option>
+                        <option value="ogr.mersin.edu.tr">ogr.mersin.edu.tr</option>
+                    </select>
+                </div>
+                <div class="input-group">
+
+                    <input type="password" required placeholder="Parola" name="password" id="passwordInput">
+                    <i class="fas fa-eye icon2"></i>
+                </div>
+
+
+                <button type="submit" id="loginBtn">Giriş yap  </button>
+                <div class="change_p">
+                    <a href="/reset_password/">Parola Degiştirme </a>
+                </div>
+            </form>
+
+
+        </div>
+
+        <div class="extension_numbers">
+            E-Posta Yardım için dahili numaralar : 34045 - 34043 - 13530
+        </div>
+
+        <div class="extra_info_emp">
+
+            <div class="help_Documents">
+                <h5>
+                    Yardım Dokümanları
+                </h5>
+                <span>
+                    <a href="#">
+                        E-Posta Sistemi Hakkında
+                    </a>
+                 
+                </span>
+                <span>
+                    <a href="#">
+                        E-Posta İstemcisi Yapılandırmaları
+                    </a>
+                </span>
+                <span>
+                    <a href="#">
+                        Uzaktan Destek Kılavuzu
+                    </a>
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+<script src="{% static 'js/slick.min.js' %}"></script>
+
+<script src="{% static 'js/jquery3.5.1.js ' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+
+<script src="{% static 'js/login.js' %}"></script>
+
+
+</html>

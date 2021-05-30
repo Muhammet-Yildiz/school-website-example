@@ -1,0 +1,340 @@
+.header {
+    /* border: red solid 7px; */
+    position: relative;
+    list-style-type: none;
+    height: 338px;
+}
+
+.header .darkbar {
+    /* border: blue solid 5px; */
+    background-color: #404041;
+}
+
+.header .darkbar .container {
+    display: flex;
+    width: 100%;
+    /* border: rgb(0, 255, 170) solid 5px; */
+    height: 65px;
+    background-color: #404041;
+}
+
+.darkbar .menu {
+    /* border: green solid 3px; */
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    border-left: rgb(27, 27, 27) solid 1px;
+    border-right: rgb(27, 27, 27) solid 1px;
+    padding: 10px 11px;
+    width: 95px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li a {
+    color: rgb(245, 245, 245);
+    font-family: 'Mukta';
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* sosyal media icon  */
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media li {
+    padding: 5px 7px;
+    background-color: #D0112B;
+    margin-right: 9px;
+    border-radius: 50%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    transition: 550ms ease;
+}
+
+.social-media li:hover {
+    background-color: white;
+}
+
+.social-media li:hover>a {
+    color: #404041;
+}
+
+.social-media li a {
+    color: rgb(245, 245, 245);
+}
+
+
+/* search form */
+
+.search_form {
+    /* border: yellow solid 3px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_form form {
+    position: relative;
+    margin-right: 1.6rem;
+    margin-left: 11vw;
+    /* border: rgb(0, 183, 255) solid 3px; */
+}
+
+.search_form form input {
+    padding: 7px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 10px;
+}
+
+.search_form form input::placeholder {
+    opacity: 0.6;
+}
+
+.search_form form input:focus {
+    border: none;
+    outline: 0;
+}
+
+.search_form form button {
+    background-color: rgb(250, 250, 250);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 7px 11px;
+    border: none;
+    border-left: 1px solid rgb(214, 214, 214);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.search_form form button:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+
+/* ------------middle_section ------------------------- */
+
+.middle_section {
+    /* border: blue solid 5px; */
+    position: relative;
+    height: 205px;
+}
+
+.middle_section .container {
+    /* border: rgb(0, 255, 191) solid 5px; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    position: relative;
+}
+
+.middle_section .container img {
+    margin-right: 1.8rem;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+}
+
+.middle_section .container h4 {
+    /* border: rgb(0, 255, 191) solid 1px; */
+    font-family: 'Hind', sans-serif;
+    margin-top: 20px;
+    margin-right: 4rem;
+    font-family: 'Mukta';
+    font-weight: bold;
+    letter-spacing: 0.9px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.middle_section .container h4 a {
+    text-decoration: none;
+    color: black;
+}
+
+.middle_section .container span {
+    font-weight: bold;
+    color: #D0112B;
+    font-family: 'Mukta';
+}
+
+
+/* ---------------navigation DROPDOWN --------------------------------- */
+
+nav#navigation {
+    /* border: blue solid 5px; */
+    background-color: #D0112B;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: #D0112B;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-right: 1px solid #a61025;
+}
+
+nav ul li a.menu__link {
+    padding: 15px;
+    display: block;
+    /* border: green solid 1px; */
+    color: white;
+    font-family: 'Mukta';
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    /* border-right: 1px solid #a61025; */
+}
+
+nav ul li:hover {
+    background: white;
+}
+
+nav ul li:hover a.menu__link {
+    color: #D0112B;
+    text-decoration: none;
+}
+
+nav ul ul.main-menu {
+    position: absolute;
+    min-width: 200px;
+    height: auto;
+    background: white;
+    top: 51px;
+    display: none;
+    left: 15px;
+    z-index: 99999;
+    padding: 10px;
+    border: 1px solid rgb(243, 243, 243);
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0px 0px 2px rgb(0 0 0 / 20%);
+}
+
+nav ul li:hover ul.main-menu {
+    display: flex;
+}
+
+.main-menu div {
+    /* border: green solid 3px; */
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    margin-right: 8px;
+}
+
+.main-menu div:hover h6 {
+    color: #D0112B;
+}
+
+.main-menu div h6 {
+    color: black;
+    font-family: 'Mukta';
+    padding: 14px 12px;
+    text-align: start;
+    font-weight: bold;
+}
+
+.main-menu div span {
+    /* border: blue solid 3px; */
+    display: flex;
+    align-items: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.main-menu div span a {
+    /* border: yellow solid 2px; */
+    display: block;
+    height: 35px;
+    padding: 6px 12px;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.8rem !important;
+}
+
+.main-menu div span a:hover {
+    background-color: #eeee;
+    color: #D0112B;
+    text-decoration: none;
+}
+
+
+/* ---------- */
+
+.login_username {
+    /* border: red solid 5px; */
+    display: flex;
+    justify-content: center;
+    width: 230px;
+    align-items: center;
+    position: absolute;
+    top: 91px;
+    right: 0;
+    padding-bottom: 4px;
+    /* border-bottom: 1px solid rgb(252, 169, 169); */
+}
+
+@media only screen and (max-width: 1000px) {
+    .login_username {
+        display: none;
+    }
+}
+
+.login_username span {
+    font-size: 1.4rem;
+    margin-right: 6px;
+}
+
+.login_username b {
+    margin-left: 6px;
+    font-size: 1rem;
+    color: rgb(63, 63, 63);
+    font-family: italic;
+}
+
+
+/* mesaj için css */
+
+.messages {
+    display: flex;
+    justify-content: center;
+    width: 100vw !important;
+    position: relative !important;
+}
+
+.messages div {
+    font-weight: bold;
+    font-family: 'Mukta';
+    font-size: 0.8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

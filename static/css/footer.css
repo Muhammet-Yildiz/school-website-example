@@ -1,0 +1,138 @@
+.footer {
+    /* border: red solid 5px; */
+    list-style-type: none;
+    margin-top: 2rem;
+}
+
+.footer .sec1 {
+    background-color: #DD1129;
+    padding: 18px 0;
+    /* border: green solid 5px; */
+}
+
+.footer .sec1 .container {
+    /* border: green solid 5px; */
+    position: relative;
+    padding: 0;
+    display: flex;
+}
+
+.footer .sec1 svg,
+.sec1 i {
+    color: white;
+    width: 45px;
+    height: 45px;
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.sec1 i {
+    /* background-color: green; */
+    padding: 12px;
+    padding-top: 13px;
+}
+
+.footer .sec1 .container li {
+    /* border: yellow solid 2px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 19%;
+    height: 110px;
+}
+
+.footer .sec1 .container li span {
+    font-family: 'Mukta';
+    font-weight: bold;
+    text-align: center;
+    margin-top: 7px;
+    margin-bottom: 6px;
+    position: absolute;
+    bottom: 22px;
+}
+
+.footer .sec1 .container li a {
+    color: white;
+    font-family: sans-serif;
+    font-size: 0.7rem;
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* ----------sec3 --------------------------- */
+
+.sec3 {
+    /* border: black solid 5px; */
+    background-color: #404041;
+}
+
+.sec3 .container {
+    /* border: rgb(10, 167, 31) solid 5px; */
+    padding: 0;
+}
+
+.sec3 .container ul {
+    /* border: rgb(10, 143, 167) solid 5px; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 0;
+    list-style-type: none;
+    align-items: center;
+}
+
+.sec3 .container ul:nth-child(1) {
+    /* background-color: blueviolet; */
+    position: relative;
+    padding: 18px 0;
+    border-bottom: rgb(128, 128, 128) solid 1px;
+}
+
+.sec3 .container ul:nth-child(1) li,
+.sec3 .container ul:nth-child(1) li a {
+    /* border: green solid 1px; */
+    color: white;
+    text-decoration: none;
+}
+
+.sec3 .container ul .login a {
+    font-family: 'Mukta';
+    color: rgb(216, 216, 216) !important;
+}
+
+.sec3 .container ul div span {
+    font-family: 'Mukta';
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.sec3 .container ul div.social-media li {
+    background-color: gray !important;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    transition: 100ms ease !important;
+}
+
+.sec3 .container ul div.social-media li:hover {
+    background-color: #DD1129 !important;
+}
+
+.logout {
+    /* border: blue solid 5px; */
+    display: flex;
+    margin-right: 11px;
+    align-items: center;
+    padding: 0 6px;
+}
+
+.logout svg {
+    margin-left: 6px;
+    width: 22px;
+    margin-top: 4px;
+}

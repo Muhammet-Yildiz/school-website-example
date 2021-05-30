@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <link rel="icon" href="/media/global/Mersin_Logo.png" type="image/gif" sizes="24x24">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %} LAYOUT PAGE {% endblock title %}
+    </title>
+    <!-- <link rel="stylesheet" href="/static/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css ' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"> {% block css %} {% endblock css %}
+    <link rel="stylesheet" href="{% static 'css/slicky.css'   %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+    </style>
+
+</head>
+
+<body>
+    {% include "includes/navbar.html" %}
+    <div class="container  ">
+
+
+
+
+    </div>
+    {% block content %} {% endblock content %} {% include "includes/footer.html" %}
+
+</body>
+
+
+{% block script %} {% endblock script %}
+
+<script src="{% static 'js/jquery3.5.1.js ' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+
+
+<!-- slick slider için  -->
+
+<script src="{% static 'js/slick.min.js' %}"></script>
+
+<script src="/static/js/slider.js"></script>
+
+
+</html>

@@ -1,0 +1,184 @@
+body {
+    /* border: blue solid 5px; */
+    width: 100%;
+    height: 1500px;
+}
+
+.sliderEmp {
+    /* border: green solid 5px; */
+    width: 100%;
+    height: 540px;
+    position: relative;
+    margin-top: -1rem;
+}
+
+.brand-img img {
+    /* border: blue solid 5px; */
+    width: 100%;
+    height: 470px;
+}
+
+
+/* ----- HABERLER KISMI ICIN CSS ----- */
+
+.NewsEmployee {
+    /* border: red solid 5px; */
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.NewsEmployee .container {
+    display: flex;
+    /* border: yellow solid 5px; */
+    position: relative;
+    height: 100%;
+}
+
+.sec2c {
+    /* border: green solid 5px; */
+    margin-right: 6rem;
+    height: 500px;
+    list-style-type: none;
+}
+
+.sec2c li {
+    /* border: red solid 2px; */
+    display: block;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* background-color: blanchedalmond; */
+    border-bottom: 1px solid rgb(199, 201, 201);
+}
+
+.sec2c li a {
+    font-family: 'Mukta';
+    font-weight: bold;
+    color: rgb(36, 36, 36);
+    text-decoration: none;
+}
+
+.sec2c li svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+}
+
+
+/* ----------------------- */
+
+
+/* ----------------------- */
+
+
+/* ----------------------- */
+
+.NewsEmployee .newsWrap,
+.AnnouncementsWrap,
+.StudentNewsWrap,
+.automatıonsWrap,
+.advertisementsWrap {
+    /* border: blue solid 5px; */
+    position: relative;
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.NewsEmployee .newsWrap a,
+.AnnouncementsWrap a,
+.StudentNewsWrap a,
+.automatıonsWrap a,
+.advertisementsWrap a {
+    /* border: rgb(255, 0, 191) solid 5px; */
+    display: inline !important;
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.NewsEmployee .newsWrap .New,
+.announcement,
+.studentsNew,
+.automatıon,
+.advertisement {
+    /* border: green solid 8px; */
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+
+.New .new_image,
+.announcement .announcement_image,
+.studentsNew .studentsNew_image,
+.automatıon .automatıon_image,
+.advertisement .advertisement_image {
+    /* border: rgb(0, 70, 128) solid 5px; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.New .new_image img,
+.announcement_image img,
+.studentsNew img,
+.automatıon img,
+.advertisement_image img {
+    width: 100%;
+    transition: 350ms ease;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.New .new_image img:hover,
+.announcement_image img:hover,
+.studentsNew img:hover,
+.automatıon img:hover,
+.advertisement_image img:hover {
+    transform: scale(1.1);
+}
+
+.New .new_title,
+.announcement_title,
+.studentsNew_title,
+.automatıon_title,
+.advertisement_title {
+    position: absolute;
+    bottom: 0;
+    /* border: red solid 2px; */
+    color: rgb(224, 224, 224);
+    font-weight: bold;
+    font-family: 'Mukta';
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 6px;
+    z-index: 88;
+    box-shadow: inset 0 0 100px rgb(255, 132, 115);
+    /* background-color: linear-gradient(to bottom, rgba(124, 16, 16, 0) 10%, rgba(0, 0, 0, 0.78) 79%, rgba(0, 0, 0, 0.98) 100%); */
+}
+
+.announcement_title {
+    box-shadow: inset 0 0 100px rgb(84, 145, 5);
+}
+
+.studentsNew_title {
+    box-shadow: inset 0 0 100px rgb(5, 122, 143);
+}
+
+.automatıon_title {
+    box-shadow: inset 0 0 100px rgb(127, 5, 143);
+}
+
+.advertisement_title {
+    box-shadow: inset 0 0 100px rgb(5, 143, 51);
+}
+
+.checked {
+    background-color: #DD1129 !important;
+    color: white;
+}

@@ -1,0 +1,607 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind:wght@500;600&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="darkbar ">
+            <div class="container">
+
+                <div class="menu">
+                    <li>
+                        <a href="/ögrenci">
+                        Ögrenci 
+                    </a>
+                    </li>
+                    <li>
+                        <a href="/personel">
+                        Personel 
+                    </a>
+                    </li>
+
+                    <li>
+                        <a href="/mezun">
+                        Mezun 
+                    </a>
+                    </li>
+                    <li>
+                        <a href="/araştırmacı">
+                        Araştırmacı  
+                    </a>
+                    </li>
+                    <li>
+                        <a href="/ziyaretci">
+                        Ziyaretçi 
+                    </a>
+                    </li>
+                    <li>
+                        <a href="/medya">
+                        Medya 
+                    </a>
+                    </li>
+
+                </div>
+
+                <div class="search_form">
+
+                    <form action="/ara" method="GET">
+
+                        <input type="text" placeholder="Ara..." name="q">
+                        <button type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+
+
+
+                </div>
+
+                <div class="social-media">
+                    <!-- D0112B  RED -->
+                    <li>
+                        <a href="https://tr-tr.facebook.com/" target="_blank">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M86,17.91667c-37.60139,0 -68.08333,35.48195 -68.08333,68.08333c0,37.60139 35.48195,68.08333 68.08333,68.08333c37.60139,0 68.08333,-35.48195 68.08333,-68.08333c0,-37.60139 -35.48195,-68.08333 -68.08333,-68.08333z" fill="#d0112b"></path><path d="M95.21633,104.04567h17.61925l2.76633,-17.89875h-20.38917v-9.7825c0,-7.43542 2.4295,-14.02875 9.38475,-14.02875h11.17642v-15.61975c-1.96367,-0.26517 -6.11675,-0.84567 -13.96425,-0.84567c-16.38658,0 -25.9935,8.65375 -25.9935,28.36925v11.90742h-16.84525v17.89875h16.84525v49.19558c3.33608,0.50167 6.71517,0.84208 10.18383,0.84208c3.13542,0 6.19558,-0.28667 9.21633,-0.69517z" fill="#ffffff"></path></g></g></svg> -->
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://twitter.com/?lang=tr" target="_blank">
+
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none" stroke="none"></path><g><circle cx="40" cy="40" transform="scale(2.15,2.15)" r="37.5" fill="#d0112b" stroke="#d0112b"></circle><path d="M138.2966,53.83815c-3.8442,1.70495 -8.7118,3.3535 -13.07415,3.8356c4.4376,-2.6316 11.47455,-8.1141 13.07415,-13.07415c-4.1452,2.43595 -11.6401,5.03745 -16.53135,5.97915c-3.9044,-4.1409 -9.47505,-5.97915 -15.64555,-5.97915c-11.8551,0 -20.12185,10.0448 -20.12185,21.79025v8.7161c-17.4322,0 -34.4351,-13.2784 -45.00595,-26.1483c-1.8619,3.14115 -2.9068,6.8198 -2.9068,10.707c0,7.92705 7.28205,15.97235 13.04835,19.79935c-3.5174,-0.10965 -10.17595,-2.79285 -13.07415,-4.35805c0,0.0688 0,0.15695 0,0.3594c0,10.3157 7.23905,17.31825 17.0495,19.2726c-1.79095,0.49235 -3.97535,2.2704 -12.37755,2.2704c2.72835,8.4323 16.4432,12.8914 25.8344,13.07415c-7.3487,5.69535 -20.44865,8.7161 -35.50635,8.7161c-1.73935,0 -2.68105,0.09675 -4.35805,-0.10105c9.49225,6.01355 22.74915,8.81715 34.8644,8.81715c39.47185,0 61.0127,-35.14945 61.0127,-58.26715c0,-0.9355 -0.0351,-4.01835 -0.0774,-4.92565c4.22045,-2.9756 5.9297,-6.08665 8.79565,-10.37375" fill="#ffffff" stroke="none"></path></g></g></svg> -->
+                            <i class="fab fa-twitter"></i>
+                        </a>
+
+
+                    </li>
+
+
+                    <li>
+                        <a href="https://tr.linkedin.com/" target="_blank">
+
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M86,14.33333c-39.5815,0 -71.66667,32.08517 -71.66667,71.66667c0,39.5815 32.08517,71.66667 71.66667,71.66667c39.5815,0 71.66667,-32.08517 71.66667,-71.66667c0,-39.5815 -32.08517,-71.66667 -71.66667,-71.66667z" fill="#d0112b"></path><path d="M107.5,125.41667v-32.25c0,-3.95352 -3.21425,-7.16667 -7.16667,-7.16667c-3.95352,0 -7.16667,3.21425 -7.16667,7.16667v32.25h-21.5v-60.91667h21.5v3.68008c3.72667,-2.39367 8.06967,-3.68008 12.54167,-3.68008c12.84267,0 23.29167,10.449 23.29167,23.29167v37.625zM46.58333,125.41667v-60.91667h10.62817c-6.15975,0 -10.62817,-4.52217 -10.62817,-10.75358c0,-6.22783 4.54008,-10.74642 10.78942,-10.74642c6.07733,0 10.58158,4.48633 10.71058,10.67475c0,6.28517 -4.54008,10.82525 -10.793,10.82525h10.793v60.91667z" fill="#d0112b" opacity="0.05"></path><path d="M109.29167,123.625v-35.45833c0,-4.93783 -4.01692,-8.95833 -8.95833,-8.95833c-4.94142,0 -8.95833,4.0205 -8.95833,8.95833v35.45833h-17.91667v-57.33333h17.91667v5.49683c3.90583,-3.50092 9.00133,-5.49683 14.33333,-5.49683c11.85725,0 21.5,9.64275 21.5,21.5v35.83333zM48.375,123.625v-57.33333h17.91667v57.33333zM57.2115,62.70833c-5.12058,0 -8.8365,-3.76967 -8.8365,-8.96192c0,-5.18867 3.784,-8.95475 8.99775,-8.95475c5.14567,0 8.81142,3.66575 8.91892,8.91892c0,5.22808 -3.78758,8.99775 -9.00133,8.99775z" fill="#d0112b" opacity="0.07"></path><path d="M50.16667,68.08333h14.33333v53.75h-14.33333zM57.29033,60.91667h-0.07883c-4.2785,0 -7.04483,-3.18917 -7.04483,-7.17025c0,-4.06708 2.85233,-7.16358 7.20608,-7.16358c4.36092,0 7.04483,3.096 7.12725,7.16358c0,3.98108 -2.76633,7.17025 -7.20967,7.17025zM125.41667,87.79167c0,-10.88617 -8.82217,-19.70833 -19.70833,-19.70833c-6.67217,0 -12.55958,3.32533 -16.125,8.39933v-8.39933h-14.33333v53.75h14.33333v-28.66667c0,-5.93758 4.81352,-10.75 10.75,-10.75c5.93758,0 10.75,4.81352 10.75,10.75v28.66667h14.33333c0,0 0,-32.53358 0,-34.04167z" fill="#ffffff"></path></g></g></svg> -->
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/?hl=tr" target="_blank">
+
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#d0112b"><path d="M86,11.46667c-41.09653,0 -74.53333,33.4368 -74.53333,74.53333c0,41.09653 33.4368,74.53333 74.53333,74.53333c41.09653,0 74.53333,-33.4368 74.53333,-74.53333c0,-41.09653 -33.4368,-74.53333 -74.53333,-74.53333zM66.88516,34.4h38.21849c17.91667,0 32.49636,14.57422 32.49636,32.48516v38.21849c0,17.91667 -14.57423,32.49636 -32.48516,32.49636h-38.21849c-17.91667,0 -32.49636,-14.57423 -32.49636,-32.48516v-38.21849c0,-17.91667 14.57422,-32.49636 32.48516,-32.49636zM66.88516,45.86667c-11.58707,0 -21.01849,9.43689 -21.01849,21.02969v38.21849c0,11.58707 9.43689,21.01849 21.02969,21.01849h38.21849c11.58707,0 21.01849,-9.43689 21.01849,-21.02969v-38.21849c0,-11.58707 -9.43689,-21.01849 -21.02969,-21.01849zM112.76352,55.41849c2.10987,0 3.81849,1.70862 3.81849,3.81849c0,2.10987 -1.70862,3.82969 -3.81849,3.82969c-2.10987,0 -3.82969,-1.71982 -3.82969,-3.82969c0,-2.10987 1.71982,-3.81849 3.82969,-3.81849zM86,57.33333c15.8068,0 28.66667,12.85987 28.66667,28.66667c0,15.8068 -12.85987,28.66667 -28.66667,28.66667c-15.8068,0 -28.66667,-12.85987 -28.66667,-28.66667c0,-15.8068 12.85987,-28.66667 28.66667,-28.66667zM86,68.8c-9.4993,0 -17.2,7.7007 -17.2,17.2c0,9.4993 7.7007,17.2 17.2,17.2c9.4993,0 17.2,-7.7007 17.2,-17.2c0,-9.4993 -7.7007,-17.2 -17.2,-17.2z"></path></g></g></svg> -->
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/" target="_blank">
+
+                            <i class="fab fa-youtube"></i>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 172 172" style=" fill:#000000;border-radius : 50%"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#d0112b"></path><g><path d="M150.5,132.58333c0,9.89717 -8.0195,17.91667 -17.91667,17.91667h-93.16667c-9.89358,0 -17.91667,-8.0195 -17.91667,-17.91667v-93.16667c0,-9.89717 8.02358,-17.91667 17.91667,-17.91667h93.16667c9.89717,0 17.91667,8.0195 17.91667,17.91667z" fill="#d0112b"></path><path d="M135.78808,91.36783c-0.989,-3.52352 -3.90225,-6.2995 -7.60383,-7.35192c-6.70442,-1.70925 -37.18425,-1.70925 -37.18425,-1.70925c0,0 -35.47983,0 -37.18425,1.71283c-3.698,0.94352 -6.61483,3.71592 -7.60383,7.35192c-1.79525,6.3855 -1.79525,19.71192 -1.79525,19.71192c0,0 0,13.32642 1.79525,19.7155c0.989,3.52352 3.90225,6.2995 7.60383,7.35192c6.70442,1.70925 37.18425,1.70925 37.18425,1.70925c0,0 35.47625,0 37.18425,-1.71283c3.698,-0.94352 6.61483,-3.71592 7.60383,-7.35192c1.79525,-6.3855 1.79525,-19.71192 1.79525,-19.71192c0,0 0,-13.32642 -1.79525,-19.7155z" fill="#ffffff"></path><path d="M58.52658,132.58333h-5.96983v-37.06958h-5.97342v-5.93542h17.91667v5.93542h-5.97342zM82.41667,132.58333h-5.375l-0.59842,-4.05633c-2.35783,2.54775 -5.16358,4.05633 -7.34583,4.05633c-1.90992,0 -3.25367,-0.82775 -3.913,-2.33992c-0.387,-0.946 -0.68442,-2.365 -0.68442,-4.49708v-27.20467h5.97342v27.79592c0.1505,0.86 0.77758,1.1825 1.55158,1.1825c1.19325,0 3.10675,-1.35075 4.41825,-3.02075v-25.95767h5.97342zM125.41667,117.04352v-9.67858c0,-2.78425 -0.688,-4.7945 -1.90992,-6.09883c-1.64117,-1.77733 -4.00258,-2.72333 -6.95883,-2.72333c-3.01717,0 -5.34633,0.946 -7.04842,2.72333c-1.28283,1.35075 -1.9995,3.43283 -1.9995,6.21708v16.45825c0,2.752 0.80625,4.70492 2.06042,5.98058c1.70208,1.77375 4.03125,2.66352 7.138,2.66352c3.0745,0 5.49325,-0.91733 7.10575,-2.81292c0.71667,-0.82775 1.19325,-1.77733 1.40467,-2.81292c0.02867,-0.473 0.20783,-1.74508 0.20783,-3.25367h-5.97342v2.36858c0,1.36167 -1.34375,2.48683 -2.98492,2.48683c-1.64117,0 -2.98492,-1.12517 -2.98492,-2.48683v-9.03zM113.47342,105.32133c0,-1.39033 1.34375,-2.48683 2.98492,-2.48683c1.64117,0 2.98492,1.0965 2.98492,2.48683v7.60742h-5.97342v-7.60742zM103.13908,102.09633c-0.74533,-2.31483 -2.56925,-3.58692 -4.8375,-3.61917c-2.89533,-0.02867 -4.09217,1.4835 -6.33175,4.09217v-12.986h-5.96983v43h5.375l0.59842,-3.70517c1.88125,2.31125 4.32867,3.70517 6.32817,3.70517c2.26825,0 4.21042,-1.18608 4.95575,-3.50092c0.35833,-1.357 0.62708,-2.40083 0.65575,-5.01358v-15.566c0.00358,-2.93475 -0.38342,-5.16 -0.774,-6.407zM97.94325,123.3525c0,3.11392 -0.71667,4.18175 -2.32917,4.18175c-0.9355,0 -2.6875,-0.6235 -3.64425,-1.57358v-20.37483c0.95675,-0.94958 2.71617,-1.86692 3.64425,-1.86692c1.6125,0 2.32917,0.97825 2.32917,4.09217z" fill="#d0112b"></path><path d="M53.75,32.25l6.57542,0.00358l4.25342,20.468h0.41208l4.042,-20.46442l6.65067,-0.00358l-7.60025,28.27967v14.71675h-6.53352l-0.01075,-13.92125zM75.74808,50.4605c0,-2.408 0.78475,-4.33225 2.35425,-5.75483c1.56592,-1.42975 3.66933,-2.15 6.321,-2.15358c2.41875,0 4.38958,0.74892 5.93542,2.2575c1.53725,1.49783 2.31125,3.44 2.31125,5.81217l0.01075,16.07125c0,2.65883 -0.74892,4.7515 -2.2575,6.278c-1.50858,1.51933 -3.57975,2.279 -6.235,2.279c-2.5585,0 -4.59025,-0.79192 -6.13467,-2.35067c-1.53367,-1.55875 -2.29333,-3.66575 -2.29692,-6.35667l-0.01075,-16.13575l0.00717,0.00358zM81.75375,67.17317c0,0.84567 0.20425,1.51575 0.63783,1.98158c0.41208,0.45867 0.99975,0.69158 1.77375,0.69158c0.79192,0 1.41183,-0.2365 1.87767,-0.72025c0.46225,-0.46225 0.70233,-1.12517 0.70233,-1.96008l-0.01075,-16.95275c0,-0.67367 -0.35725,-1.2255 -0.72025,-1.64475c-0.46942,-0.41567 -1.09292,-0.62708 -1.85975,-0.62708c-0.71358,0 -1.29358,0.215 -1.7415,0.63567c-0.44433,0.41925 -0.6665,0.97108 -0.6665,1.64475zM114.66667,43v32.25h-5.10625l-0.81342,-3.94167c-1.09292,1.28283 -2.22883,2.2575 -3.41492,2.92042c-1.17533,0.6665 -2.322,1.02125 -3.43283,1.02125c-1.376,0 -2.40442,-0.473 -3.10317,-1.41183c-0.69875,-0.92808 -1.04275,-2.32917 -1.04275,-4.20683l-0.01433,-26.63133h5.92325l0.01433,35.45625c0,0.731 0.129,1.27208 0.37983,1.60892c0.2365,0.3225 0.65575,0.50167 1.20042,0.50167c0.44433,0 0.99617,-0.22217 1.64833,-0.6665c0.67367,-0.43717 1.28283,-1.00692 1.83467,-1.68775l-0.00717,-35.21258z" fill="#ffffff"></path></g></g></svg> -->
+                        </a>
+                    </li>
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %} {% if message.tags == "info" %}
+            <div class="alert alert-danger">
+                {{message}}
+            </div>
+            {% else %}
+            <div class="alert alert-{{message.tags}}">
+                {{message}}
+            </div>
+            {% endif %} {% endfor %}
+        </div>
+
+        {% endif %}
+
+
+
+
+        <div class="middle_section">
+
+
+            <div class="container">
+                <a href="/">
+                    <img src="/media/global/Mersin_Logo.png" alt="MERSİN">
+
+                </a>
+                <h4>
+                    <a href="/">
+                        MERSİN ÜNİVERSİTESİ
+                    </a>
+                </h4>
+
+
+                <span> "BİZLER DÜNYAYI DEGİŞTİREBİLİRİZ"</span> {% if request.user.is_authenticated %}
+
+
+                <div class="login_username">
+                    <span>
+                        Hosgeldiniz  , 
+                    </span>
+                    <b>
+                        {{request.user|title}}
+                    </b>
+
+                </div>
+                {% endif %}
+
+            </div>
+
+        </div>
+
+        <nav id="navigation">
+            <ul class="container">
+
+                <li class="Meü_About">
+                    <a href="#" class="menu__link">
+                        MEÜ Hakkında
+                     </a>
+
+                    <ul class="main-menu">
+                        <div href="#">
+                            <h6>
+                                Genel
+                            </h6>
+                            <span>
+                                <a href="#">Tarihçe</a>
+                                <a href="#">Misyon & Vizyon</a>
+                                <a href="#">Etik İlkeler & Temel Degerler </a>
+                                <a href="#">Üniversite Yönetimi</a>
+                                <a href="#">Genel Bilgiler </a>
+                                <a href="#">Konum ve Kampüs </a>
+                                <a href="#">Kalite Güvence Sistemi  </a>
+                                <a href="#">Üniversite Senatosu Kararları  </a>
+                                <a href="#">Organizasyon Şeması </a>
+                                <a href="#">Stratejik ve Mali Yönetim Belgeleri </a>
+                            </span>
+
+
+                        </div>
+                        <div href="#">
+                            <h6>
+                                İdari Birimler
+                            </h6>
+
+                            <span>
+                                <a href="#">Daire Başkanlıkları</a>
+                                <a href="#">Müdürlükler</a>
+                                <a href="#">Koordinatorlükler</a>
+                                <a href="#">Ofisler</a>
+                                <a href="#">Bilgi Edinme Birimi</a>
+                                <a href="#">Diger</a>
+                            </span>
+
+                        </div>
+                        <div href="#">
+                            <h6>
+                                MEÜ 'ye Bakış
+                            </h6>
+
+                            <span>
+                                <a href="#">Anı Agaçı</a>
+                                <a href="#">Basında MEÜ</a>
+                                <a href="#">Görsellerle MEÜ</a>
+                                <a href="#">MEÜLÜ Dergisi </a>
+                                <a href="#">İlk Bakışta MEÜ (Görsel)</a>
+                            </span>
+
+                        </div>
+
+
+
+
+                    </ul>
+
+                </li>
+                <li class="academic">
+                    <a href="#" class="menu__link">
+                    Akademik
+                    </a>
+
+                    <ul class="main-menu">
+                        <div href="#">
+                            <h6>
+                                Akademik Birimler Ve Programlar
+                            </h6>
+
+                            <span>
+                                
+                                <a href="#">Fakülteler, Enstitüler ve Okullar
+                                </a>
+                                <a href="#">
+                                    Lisans Programları
+
+                                </a>
+                                <a href="#"> 
+                                    Lisansüstü Programlar
+
+                                </a>
+
+                                <a href="#">
+                                        Uluslararası Ortak Programlar
+                                </a>
+                                <a href="#">
+                                    Erasmus Programı
+                                
+                                </a>
+                                <a href="#">
+
+                                    Uzaktan Eğitim Programları
+
+                                </a>
+                                <a href="#">
+                                        Öğretim Üyesi Yetiştirme Programı (ÖYP)
+                                </a>
+                            </span>
+
+                        </div>
+
+                        <div href="#">
+                            <h6>
+                                Akademik Bilgiler
+                            </h6>
+
+                            <span>
+                                <a href="#">
+                                    Akademik Takvim
+                                </a>
+                                <a href="#">
+                                    Öğretim Elemanları Bilgi Bankası (2017 ve öncesi)
+                                </a>
+                               <a href="#">
+                                Akademik Katalog
+                                </a>
+                                <a href="#">
+                                    Program Yeterlilikleri Bilgi Paketi
+                                </a>
+                               
+                                <a href="#">
+                                Açılan Dersler
+                                    
+                                </a>
+                                <a href="#">
+                                MEÜ-SIS
+                                    
+                                </a>
+                                <a href="#">
+                                MEÜSyllabus
+                                    
+                                </a>
+                                <a href="#">
+                                MEÜClass
+                                    
+                                </a>
+                                <a href="#">
+
+                                    OpenMEÜ
+
+                                </a>
+                            </span>
+
+                        </div>
+
+                        <div href="#">
+                            <h6>
+                                Öğrenciler İçin
+                            </h6>
+
+                            <span>
+                                <a href="#">
+                                Kayıtlar
+                                </a>
+                                <a href="#">
+                                    Yönetmelikler
+
+                                </a>
+                                <a href="#">
+                                    Yerleşkede Bulunan Derslikler
+
+                                </a>
+                                <a href="#">
+                                    Öğrenci Portali
+
+                                </a>
+                                <a href="#">
+                                    Uluslararası Öğrenci Ofisi
+
+                                </a>
+                                <a href="#">
+                                    Uluslararası İşbirliği Ofisi
+
+                                </a>
+                                <a href="#">
+                                    Öğrenci Temsilcileri Kurulu
+
+                                </a>
+                                <a href="#">
+                                    Çevrimiçi Başvurular
+
+                                </a>
+                                <a href="#">
+                                    Eğitim ve Kurslar
+
+                                </a>
+                                <a href="#">
+                                    Sürekli Eğitim Merkezi
+
+                                </a>
+                                <a href="#">
+                                    Yabancı Dil Kursları
+
+                                </a>
+                                <a href="#">
+                                    Açık Ders Materyalleri
+
+                                </a>
+                               
+                            </span>
+
+                        </div>
+                    </ul>
+
+                </li>
+
+                <li class="services">
+                    <a href="#" class="menu__link">
+                        Servisler
+                     </a>
+
+                    <ul class="main-menu">
+                        <div href="#">
+                            <h6>
+                                E-Hizmetler
+                            </h6>
+
+                            <span>
+                                
+                                
+                               
+                               
+
+                                <a href="#">
+                                    Tüm Servisler
+                                </a>
+                                <a href="#">
+                                    MEÜ-Mail
+                                </a>
+                                <a href="#"> 
+                                    MEÜ Harita Servisi
+                                </a>
+
+                                <a href="#">
+                                    MEÜ Portal
+                                </a>
+                                <a href="#">
+                                    Elektronik Belge Yönetim Sistemi
+                                </a>
+                                <a href="#">
+
+                                    Ziyaretçi Kayıt
+
+                                </a>
+
+                                <a href="#">
+                                    Akıllı Kart Uygulamaları
+                                </a>
+                                <a href="#">
+
+                                    Bilişim Hizmetleri
+
+                                </a>
+                                <a href="#">
+                                    MEÜ Telefon Rehberi
+                                </a>
+                                <a href="#">
+                                    Yerleşke İçi Ring Seferleri Takip Sistemi
+
+                                </a>
+                            </span>
+
+                        </div>
+                        <div href="#">
+                            <h6>
+                                Hizmet Birimleri
+                            </h6>
+
+
+
+
+                            <span>
+                                
+                                <a href="#">Kütüphane
+                                </a>
+                                <a href="#">
+                                    Sağlık ve Rehberlik Merkezi
+                                </a>
+
+                                <a href="#"> 
+                                    Engelsiz MEÜ Birimi
+                                </a>
+
+                                <a href="#">
+                                    Kariyer Planlama Uygulama ve Araştırma Merkezi
+                                </a>
+
+                                <a href="#">
+                                    Sürekli Eğitim Merkezi
+                                </a>
+                                <a href="#">
+                                    Öğrenme ve Öğretmeyi Geliştirme Merkezi
+                                </a>
+                            </span>
+
+                        </div>
+
+                    </ul>
+                </li>
+
+                <li class="campus_life">
+                    <a href="#" class="menu__link">
+                         Kampüste Yaşam
+                    
+                     </a>
+
+                    <ul class="main-menu">
+                        <div href="#">
+                            <h6>
+                                Sosyal Hizmetler
+                            </h6>
+
+                            <span>
+                               <a href="#">  Kütüphane</a>
+                               <a href="#">Alışveriş</a>
+                               <a href="#">  Barınma</a>
+                               <a href="#">  Yiyecek & İçecek</a>
+                               <a href="#">Sağlık</a>
+                               <a href="#"> Bankalar & PTT</a>
+                            </span>
+
+                        </div>
+
+
+                        <div href="#">
+                            <h6>
+                                Kültür ,Sanat ve Spor
+                            </h6>
+
+                            <span>
+                                <a href="#">  Spor Olanakları</a>
+                                <a href="#"> Öğrenci Toplulukları</a>
+                                <a href="#">
+                                    Kültür ve Kongre Merkezi</a>
+                            </span>
+
+                        </div>
+                        <div href="#">
+                            <h6>
+                                Ulaşım
+                            </h6>
+                            <span>
+                                <a href="#">Ulaşım Hizmetleri</a>
+                                <a href="#"> Kampüs Haritası</a>
+                                <a href="#">   Kampüs Trafik Kuralları</a>
+                            </span>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="research">
+                    <a href="#" class="menu__link">
+                         Araştırma
+                    
+                     </a>
+
+                    <ul class="main-menu">
+                        <div href="#">
+                            <h6>
+                                Araştırma Merkezleri ve Laboratuvarlar
+                            </h6>
+                            <span>
+                                <a href="#"> Araştırma Merkezleri</a>
+                                <a href="#"> Laboratuvarlar</a>
+                                <a href="#">  Merkez Laboratuvarı</a>
+                            </span>
+                        </div>
+
+
+                        <div href="#">
+                            <h6>
+                                Araştırmacılar için
+                            </h6>
+                            <span>
+                                <a href="#">Research@MEÜ</a>
+                                <a href="#">   Proje Destek Ofisi</a>
+                                <a href="#"> Teknoloji Transfer Ofisi</a>
+                                <a href="#">MEÜ Tez Koleksiyonu Sorgulama Sayfası</a>
+                                <a href="#"> MEÜ Etik Kurulu</a>
+                            </span>
+                        </div>
+                        <div href="#">
+                            <h6>
+                                Teknokent
+                            </h6>
+                            <span>
+                                <a href="#">MEÜ Teknokent</a>
+                            </span>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="university_candidates">
+                    <a href="#" class="menu__link">
+                         Üniversite Adayları
+                     </a>
+                </li>
+
+                {% if request.user.is_authenticated %}
+                <li class="support">
+                    <a href="/admin" class="menu__link">
+                        Admin Paneline Git
+                     </a>
+                </li>
+                {% else %}
+
+                <li class="support">
+                    <a href="#" class="menu__link">
+                         Destek Olun
+                     </a>
+                </li>
+
+                {% endif %}
+
+
+            </ul>
+
+        </nav>
+
+
+    </div>
+</body>
+
+<script src="/static/js/jquery3.5.1.js"></script>
+<script src="/static/js/navbar.js"></script>
+
+
+</html>
